@@ -701,6 +701,10 @@ html {
     height: 50%;
   }
 }
+.shopButton {
+  font-size: 25px;
+}
+
 .dishesWrap {
   display: flex;
   flex-wrap: wrap;
