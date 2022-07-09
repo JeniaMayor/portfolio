@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+
+.logoBar {
+    
+  
+    
+   
+
+
+
+    &__logo {
+        color: rgb(255, 255, 255);
+        letter-spacing: 5px;
+        font-family: 'Patua One', cursive;
+        background: linear-gradient(82deg, rgba(255, 200, 221, 0.767) 0%, rgba(236, 156, 232, 1) 50%, rgba(98, 116, 216, 1) 100%);
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 0px;
+        text-align: center;
+        width: 100%;
+        animation-name: logoAnimation;
+        animation-duration: 10s;
+        transition: 5ms ease-in-out;
+        
+
+        text-shadow:
+            0 0 7px rgb(255, 57, 255),
+            0 0 10px rgb(255, 57, 255),
+            0 0 21px rgb(255, 57, 255),
+            0 0 42px rgb(255, 57, 255),
+            0 0 82px rgb(255, 57, 255),
+            0 0 92px rgb(255, 57, 255),
+            0 0 102px white,
+            0 0 151px white;
+    }
+
+
+}
+
+.screen {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+}
+
+.login {
+
+
+
+
+    &__form {
+        font-family: 'Croissant One', cursive;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        border: rgb(255, 185, 197) solid 3px;
+        margin: auto;
+        background-color: white;
+        padding: 10px;
+        gap: 10px;
+
+        input {
+            width: 150px;
+            align-self: center;
+            font-family: 'Croissant One', cursive;
+            border: none;
+
+            &[type=text],
+            &[type=password] {
+                border-bottom: rgba(128, 128, 128, 0.651) solid 1px;
+            }
+
+            &[type=submit] {
+                cursor: pointer;
+            }
+
+
+
+        }
+
+        img {
+            width: 20px;
+        }
+    }
+}
+
+.register {
+   
+    &__form {
+        font-family: 'Croissant One', cursive;
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 300px;
+        border: rgb(255, 185, 197) solid 3px;
+        margin: auto;
+        background-color: white;
+        padding: 10px;
+        gap: 10px;
+
+        input {
+            width: 150px;
+            align-self: center;
+            font-family: 'Croissant One', cursive;
+            border: none;
+
+            &[type=text],
+            &[type=password] {
+                border-bottom: rgba(128, 128, 128, 0.651) solid 1px;
+            }
+
+            &[type=submit] {
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+
+////////////////////////////////// animations //////////////////////////////////////////
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+
+
+}
+
+
+
+@keyframes picChange {
+    1% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ATYgyYLW7WaTDXG42S_zy9l-kt336jD5pA&usqp=CAU');
+
+    }
+
+    33% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSla3uTSqVWhy2zbgqkpGCuZlJhM1SJfve--Q&usqp=CAU');
+        
+    }
+
+    80% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaqxzU_dcyKzZ_xfdewOzlnLg_RLh7G6skXQ&usqp=CAU');
+
+    }
+
+    100% {
+        background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2ATYgyYLW7WaTDXG42S_zy9l-kt336jD5pA&usqp=CAU');
+
+    }
+}
+////////////////////////////////// landing page//////////////
+.landingPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/////////////////////////////////pictures in the landing page///////////////////////////
+.picBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+
+    .pic {
+        animation-name: picChange;
+        animation-duration: 20s;
+        animation-iteration-count: infinite;
+        width: 35vw;
+        height: 40vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation-direction: alternate;
+        border-radius: 10px;
+        
+    }
+}
+.buttons{
+    display: flex;
+    gap: 15px;
+    // justify-content: center;
+    padding-bottom: 30px;
+   span{
+    padding-top: 5px;
+   }
+}
+
+
+.register-btn{
+    font-size: 1rem;
+    width: 16vw;
+    height: 10vh;
+    
+    background-color: black;
+    color:whitesmoke;
+    font-weight: bold;
+    border-radius: 3px;
+
+}
+.login-btn{
+    width: 50px;
+    height: 30px;
+}
+
+
+
+.description{
+
+    width: 30%;
+    text-align: left;
+    font-weight: lighter;
+    margin-top: 60px;
+}
+
+
+
+
+
+
+////////////////////// Footer //////////////////////////////////////////////////////////////////////////////////
+
+.footer {
+   
+  
+    background-color: rgb(0, 0, 0);
+    position:fixed ;
+    bottom: 0px;
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+
+
+
+    .headline {
+        color: white;
+        font-weight: 900;
+    }
+
+    .text {
+        color: white;
+
+        &:hover {
+            color: grey;
+            cursor: pointer;
+        }
+    }
+
+
+    .socialMediaWrapper {
+        display: flex;
+        flex-direction: column;
+        width: 10vw;
+
+        .icons {
+            width: 10vw;
+            font-size: 30px;
+            display: flex;
+            gap: 10px;
+            color: white;
+
+
+
+            &__instagram {
+                color: white;
+                background: linear-gradient(87deg, rgba(254, 218, 117, 1) 0%, rgba(250, 126, 30, 1) 27%, rgba(214, 41, 118, 1) 43%, rgba(150, 47, 191, 1) 68%, rgba(79, 91, 213, 1) 87%);
+
+                padding: 2px;
+                border-radius: 10px;
+
+                &:hover {
+
+                    animation-name: rotate;
+                    animation-duration: 650ms;
+                    cursor: pointer;
+
+                }
+
+            }
+
+            &__googlePlus {
+                color: #db4a39;
+
+                &:hover {
+                    animation-name: rotate;
+                    animation-duration: 650ms;
+                    cursor: pointer;
+
+                }
+
+            }
+
+            &__pinterest {
+                color: #E60023;
+
+                &:hover {
+                    animation-name: rotate;
+                    animation-duration: 650ms;
+                    cursor: pointer;
+
+                }
+
+            }
+
+            &__twitter {
+                color: #1DA1F2;
+
+                &:hover {
+                    animation-name: rotate;
+                    animation-duration: 650ms;
+                    cursor: pointer;
+
+                }
+
+            }
+
+            &__facebook {
+                color: #4267B2;
+
+                &:hover {
+                    animation-name: rotate;
+                    animation-duration: 650ms;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    }
+}
