@@ -2,15 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 
 interface LikedProfileProps{   
-    // userProfile:string;
-    // name:string,
-    // age:string,
-    // gender:string,
-    // profileImg:string,
-    //  setLikedProfiles:Function,
-    // likedProfiles:Array<likedUser>,
-    // username:string,
-    // _id: string,
+ 
    likedUser:likedUser
   
     
@@ -19,7 +11,7 @@ interface LikedProfileProps{
  
 }
 interface likedUser{
-  //userProfile:any, 
+
   userProfile:string, 
   _id: string,
     name:string,
@@ -34,7 +26,7 @@ interface likedUser{
    
 }
 const LikedProfile = (props:LikedProfileProps) => {
-   // const {userProfile,name,age,gender,profileImg,username,likedProfiles} = props;
+   
     const {likedUser} = props;
     console.log(likedUser)
     

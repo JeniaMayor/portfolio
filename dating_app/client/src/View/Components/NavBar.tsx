@@ -23,7 +23,7 @@ const [loggedInUser,setloggedInUser]=useState<any>([]);
 
 
 useEffect(() => {
-    //get data on the user and show the chosen user by id
+   
 
     (async () => {
       try {

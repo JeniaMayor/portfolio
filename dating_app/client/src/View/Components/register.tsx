@@ -21,7 +21,7 @@ const Register = (props: Registerprops) => {
             const img1 = ev.target.elements.img1.value;
             const img2 = ev.target.elements.img2.value;
             const user = { name, age, gender, profileImg, description, password, username, img1, img2 }
-            // console.log(user);
+            
 
 
             const { data } = await axios.post('/api/addUser', { user });

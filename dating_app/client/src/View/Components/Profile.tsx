@@ -27,14 +27,14 @@ const Profile = () => {
   const [arr, setArr] = useState<Array<Users>>([]);
   const [cookieLoggedInUser, setcookieLoggedInUser] = useState()
   useEffect(() => {
-    //get data on the icecream and show the chosen ice cream by id
+    
 
     (async () => {
       try {
         const { data } = await axios.get(`/api/userProfile?userProfile=${userProfile}`);
 
         const { profileId } = data;
-        // console.log(data);
+        
         const { cookieLoggedIn } = data
         if (!profileId) {
           throw new Error("no profile");

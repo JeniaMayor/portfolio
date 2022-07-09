@@ -20,16 +20,15 @@ export const getUsers = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { username, password } = req.body;
-    //console.log(username,password)
+   
     if (typeof username === "string" && typeof password === "string") {
       const user = await Users.findOne({ username })
       if (user) {
-        //checking if password is right for the username that was put
+       
         if (user.password === password) {
           const payload = { username, id: user._id, loggedInUser: true }
           const token = JWT.encode(payload, secret)
-          //made that the cookie is coded and cant be hacked into
-          //we put the secret in the .env so that cant be taken either
+        
           res.cookie('userInfo', token, { httpOnly: true })
           res.send({ ok: true, login: true, user })
           return
@@ -64,7 +63,7 @@ export const getUsersProfile = async (req, res) => {
       const profileId = await Users.findOne({ _id: userProfile })
       res.send({ profileId, ok: true, cookieLoggedIn: false })
     }
-    //console.log(decoded.id);
+   
 
 
 
@@ -82,7 +81,7 @@ export const updateUser = async (req, res) => {
     const { userProfile, obj } = req.body;
     if (userProfile && obj) {
       const users = await Users.updateOne({ _id: userProfile }, obj)
-      // console.log(userProfile `update`);
+      
 
       res.send({ ok: true, users });
     } else {
@@ -99,7 +98,7 @@ export const showLoggedInCookie = async (req, res) => {
 
     const { userInfo } = req.cookies;
     const decoded = JWT.decode(userInfo, secret);
-    // console.log(decoded)
+   
     if (decoded) {
       const loggedInUserObj = await Users.findOne({ _id: decoded.id })
 
@@ -111,7 +110,7 @@ export const showLoggedInCookie = async (req, res) => {
       res.send({ error: "can't find user logged in cookie" })
     }
 
-    // console.log(decoded.id);
+    
 
 
 
